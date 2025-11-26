@@ -10,15 +10,16 @@
   color:white;
 }
 .stock_name {
-    display: inline-block;
+    display: inline-block;    /* 横に並べる*/
     font-size: 22px;
 }
-.having{
-    margin: -80px 230px;
-}
+
 .stock{
     border: solid 1px #000;
     border-radius: 5px;
     height: 80px;
     padding: 10px;
 } 
+.stock_data {
+    display: inline-block;
+}
