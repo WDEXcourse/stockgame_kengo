@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.stock_button{
+    display: inline-block;
+    margin-left: 100px;
+    display: inline-block;
+    
+}
+.stock_button button{
+  background-color: blue;
+  color:white;
+}
+.stock_name {
+    display: inline-block;
+    font-size: 22px;
+}
+.having{
+    margin: -80px 230px;
+}
+.stock{
+    border: solid 1px #000;
+    border-radius: 5px;
+    height: 80px;
+    padding: 10px;
+} 
