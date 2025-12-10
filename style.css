@@ -6,8 +6,8 @@
     
 }
 .stock_button button{
-  background-color: blue;
-  color:white;
+    background-color: blue;
+    color:white;
 }
 .stock_name {
     display: inline-block;    /* 横に並べる*/
