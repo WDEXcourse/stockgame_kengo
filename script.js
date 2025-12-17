@@ -4,15 +4,15 @@ var stock_data = {
         money: 500,
         number: 0
     },
-    "NITTA_STOCK": {
+    "NITTA": {
         money: 1500,
         number: 0
     },
-    "TOYO_STOCK": {
+    "TOYO": {
         money: 1000,
         number: 0
     },
-    "ISC_STOCK": {
+    "ISC": {
         money: 1300,
         number: 0
     }
@@ -25,6 +25,9 @@ var stock_data = {
 window.onload = function () {
     document.querySelector(".possession_number").textContent = Ownmoney;
     generaize("SKY_STOCK")
+    generaize("NITTA")
+    generaize("TOYO")
+    generaize("ISC")
 
 }
 
