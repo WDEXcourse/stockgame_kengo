@@ -35,7 +35,7 @@ function generaize(company) {
     document.querySelector("#" + company + " .stock_money").textContent = stock_data[company].money;
     document.querySelector("#" + company + " .stock_number").textContent = stock_data[company].number;
 
-    var buy_button = document.querySelector(".buy_button");
+    var buy_button = document.querySelector("#" + company + " .buy_button");
 
     buy_button.addEventListener('click', function () {
         var buystocks = Number(prompt("何株購入しますか？"));
@@ -53,7 +53,7 @@ function generaize(company) {
         }
     });
 
-    var sell_buutton = this.document.querySelector(".sell_button");
+    var sell_buutton = this.document.querySelector("#" + company + " .sell_button");
     sell_buutton.addEventListener("click", function () {
         var sellstocks = prompt("何株売却しますか？")
         if (sellstocks <= stock_data[company].number) {
