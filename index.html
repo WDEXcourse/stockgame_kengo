@@ -1,34 +1,102 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
 
-    <body>
-        <div  class="possession_money">
-            <span class="possession_number"></span>円
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="possession_money">
+        <span class="possession_number"></span>円
+    </div>
+    <div class="stock" id="SKY_STOCK">
+        <div class="stock_name">
+            <div>SKY</div>
+
         </div>
-        <div class="stock"id="SKY_STOCK">
-            <div class="stock_name">
-                <div>SKY</div>  
-                
-            </div> 
-            
-            <div class="stock_button">
-                <button onclick="buy()">購入 </button>
-                <br>
-                <button onclick="sell()">売る</button>
-            </div>
-            <div class="stock_data"> 
 
-                <div class="stock_price">
-                    <span class="stock_money">500</span>円
-                </div>
-                <div class="having">
-                    <span class="stock_number">0</span>株
-                </div>
+        <div class="stock_button">
+            <button class="buy_button">購入 </button>
+            <br>
+            <button class="sell_button">売る</button>
+        </div>
+        <div class="stock_data">
+
+            <div class="stock_price">
+                <span class="stock_money"></span>円
             </div>
-        </div> 
-    </body>
+            <div class="having">
+                <span class="stock_number"></span>株
+            </div>
+        </div>
+    </div>
+
+    <div class="stock" id="_NITTA">
+        <div class="stock_name">
+            <div>NITTA</div>
+
+        </div>
+
+        <div class="stock_button">
+            <button class="buy_button">購入 </button>
+            <br>
+            <button class="sell_button">売る</button>
+        </div>
+        <div class="stock_data">
+
+            <div class="stock_price">
+                <span class="stock_money"></span>円
+            </div>
+            <div class="having">
+                <span class="stock_number"></span>株
+            </div>
+        </div>
+    </div>
+    <div class="stock" id="_NITTA">
+        <div class="stock_name">
+            <div>TOYO</div>
+
+        </div>
+
+        <div class="stock_button">
+            <button class="buy_button">購入 </button>
+            <br>
+            <button class="sell_button">売る</button>
+        </div>
+        <div class="stock_data">
+
+            <div class="stock_price">
+                <span class="stock_money"></span>円
+            </div>
+            <div class="having">
+                <span class="stock_number"></span>株
+            </div>
+        </div>
+    </div>
+    <div class="stock" id="_NITTA">
+        <div class="stock_name">
+            <div>ISC</div>
+
+        </div>
+
+        <div class="stock_button">
+            <button class="buy_button">購入 </button>
+            <br>
+            <button class="sell_button">売る</button>
+        </div>
+        <div class="stock_data">
+
+            <div class="stock_price">
+                <span class="stock_money"></span>円
+            </div>
+            <div class="having">
+                <span class="stock_number"></span>株
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
 </html>
