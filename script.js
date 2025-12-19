@@ -70,3 +70,31 @@ function generaize(company) {
 
     })
 }
+function showRandomNews() {
+  const index = Math.floor(Math.random() * newsList.length);
+  document.getElementById("news").textContent = newsList[index];
+}
+const newsList = [
+  "アメリカが自動車の関税を3%→25%、その他の輸入品を10%にした",
+  "新しい人工知能の開発が進み、関連事業も含め業界全体の売り上げが前年の1.3倍になる",
+  "関税は上がることになったが日米政府間での関税交渉が成立する",
+  "日本国内の企業が海外に工場をたくさん作る"
+];
+const lists=[
+    {news:"アメリカが自動車の関税を3%→25%、その他の輸入品を10%にした",rato:[1.05,0.75,0.9,0.8]},
+    {news:"新しい人工知能の開発が進み、関連事業も含め業界全体の売り上げが前年の1.3倍になる",rato:[1.0,1.0,1.0,1.2]},
+    {news:"関税は上がることになったが日米政府間での関税交渉が成立する",rato:[0.95,1.05,1.05,1.0]},
+    {news:"日本国内の企業が海外に工場をたくさん作る",rato:[0.95,0.75,1.0,1,1]}
+    
+
+];
+const companies=[
+    SKY,
+    NITTA,
+    TOYO,
+    ISC
+];
+
+
+
+
