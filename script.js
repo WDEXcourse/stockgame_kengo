@@ -19,7 +19,6 @@ var stock_data = {
 }
 
 
-
 window.onload = function () {
     document.querySelector(".possession_number").textContent = Ownmoney;
     generaize("SKY_STOCK")
@@ -102,3 +101,18 @@ const lists=[
     
 
 ]
+function gaming (){
+    for (var i=0; i<5;i++){
+        var time=30;
+        showRandomNews();
+        for(var j=0; j<30;j++) {
+            
+
+        }
+
+    }
+
+    
+
+    
+};
