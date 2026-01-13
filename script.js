@@ -101,18 +101,35 @@ const lists=[
     
 
 ]
+
+
+var isgaming=false;
+
 function gaming (){
-    for (var i=0; i<5;i++){
-        var time=30;
+    if(isgaming==false){
+        
+        isgaming=true;
         showRandomNews();
-        for(var j=0; j<30;j++) {
-            
-
+        var limitTime=10;
+        var day=1;
+        document.querySelector(".limit_time").textContent = limitTime;
+        document.querySelector(".day").textContent = day;
+        
+        const limit=function (){
+            if(limitTime>0){
+                limitTime=limitTime-1;
+                document.querySelector(".limit_time").textContent = limitTime;
+                
+                console.log(Number(limitTime));
+            }
+            else {
+                day=day+1;
+                document.querySelector(".day").textContent = day;
+                showRandomNews();
+                limitTime=10;
+            }
         }
+        setInterval(limit,1000);
+}
+}
 
-    }
-
-    
-
-    
-};
