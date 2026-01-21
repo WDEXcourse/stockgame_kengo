@@ -23,3 +23,7 @@
 .stock_data {
     display: inline-block;
 }
+.clear{
+    margin-left:450px;
+    font-size: 80px;
+}

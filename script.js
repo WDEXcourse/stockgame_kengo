@@ -104,6 +104,8 @@ const lists=[
 
 
 var isgaming=false;
+let finishing;
+document.querySelector(".clear").setAttribute("style", "display:none");
 
 function gaming (){
     if(isgaming==false){
@@ -124,12 +126,32 @@ function gaming (){
             }
             else {
                 day=day+1;
-                document.querySelector(".day").textContent = day;
-                showRandomNews();
-                limitTime=10;
+                if(day>5){
+
+                    alert("あなたの最終総資産は"+ Number(Ownmoney)+"円です");
+                    if (Ownmoney>=10000000){
+                        alert("あなたは"+Number(Ownmoney-10000000)+"円黒字です");
+                        document.querySelector(".clear").setAttribute("style", "display:block");
+                    }
+                    else{
+                        alert("あなたは"+Number(Ownmoney-10000000)+"円赤字です");
+                        document.querySelector(".clear").setAttribute("style", "display:block");
+                    }
+                    clearInterval(finishing);
+                    return;
+                }
+                else{
+                    document.querySelector(".day").textContent = day;
+                    showRandomNews();
+                    limitTime=10;
+                }
             }
         }
-        setInterval(limit,1000);
-}
+        finishing =setInterval(limit,1000);
+
+    
+    }
+    document.querySelector(".clear").setAttribute("style", "display:none");
+
 }
 
