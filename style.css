@@ -15,10 +15,11 @@
 }
 
 .stock{
-    border: solid 1px #000;
+    border: solid 3px #000;
     border-radius: 5px;
-    height: 80px;
+    height: 70px;
     padding: 10px;
+    width:400px;
 } 
 .stock_data {
     display: inline-block;
@@ -27,3 +28,30 @@
     margin-left:450px;
     font-size: 80px;
 }
+.limit_time{
+    font-size: 80px;
+    
+
+}
+.day{
+    font-size:80px;
+}
+    
+.starting{
+    margin-left:500px;
+    margin-top:-300px;
+}
+.timer{
+    margin-top:220px;
+}
+.date{
+    margin-top:100px;
+}
+.showing{
+    margin-left:430px;
+    font-size:30px;
+}
+
+
+
+
