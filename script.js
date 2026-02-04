@@ -59,7 +59,7 @@ function generaize(company) {
             document.querySelector("#" + company + " .stock_number").textContent = stock_data[company].number;
             Ownmoney = Ownmoney + stock_data[company].money * sellstocks;
 
-            document.querySelector(".possession_number").textContent = Ownmoney;
+            document.querySelector(".possession_number").textContent = Math.ceil(Ownmoney);
         }
         else {
             alert("売却できません")
@@ -81,7 +81,7 @@ function showRandomNews() {
     stock_data[names[i]].money = new_money;
     
     console.log(now_money)
-    document.querySelector("#"+names[i]+" .stock_money").textContent=stock_data[names[i]].money;
+    document.querySelector("#"+names[i]+" .stock_money").textContent = Math.ceil(stock_data[names[i]].money);
   }
 
 
@@ -94,10 +94,10 @@ const newsList = [
   "日本国内の企業が海外に工場をたくさん作る"
 ]
 const lists=[
-    {news:"アメリカが自動車の関税を3%→25%、その他の輸入品を10%にした",rato:[1.05,0.75,0.9,0.8]},
+    {news:"アメリカが自動車の関税を3%→25%、その他の輸入品を10%にした",rato:[1.2,0.95,0.9,0.9]},
     {news:"新しい人工知能の開発が進み、関連事業も含め業界全体の売り上げが前年の1.3倍になる",rato:[1.0,1.0,1.0,1.2]},
-    {news:"関税は上がることになったが日米政府間での関税交渉が成立する",rato:[0.95,1.05,1.05,1.0]},
-    {news:"日本国内の企業が海外に工場をたくさん作る",rato:[0.95,0.75,1.0,1,1]}
+    {news:"関税は上がることになったが日米政府間での関税交渉が成立する",rato:[0.95,1.2,1.2,1.0]},
+    {news:"日本国内の企業が海外に工場をたくさん作る",rato:[0.95,0.9,1.0,1,2]}
     
 
 ]
