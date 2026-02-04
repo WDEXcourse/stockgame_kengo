@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .stock_button{
     display: inline-block;
-    margin-left: 100px;
+    
     display: inline-block;
     
 }
@@ -28,7 +28,7 @@
     color:aliceblue;
 }
 .clear{
-    margin-left:450px;
+
     font-size: 80px;
 }
 .limit_time{
@@ -43,21 +43,19 @@
 }
     
 .starting{
-    margin-left:500px;
-    margin-top:-300px;
+
 }
 .timer{
-    margin-top:220px;
+
     font-size:30px;
-    position: relative; 
-    top:-350px;
+    
 
 }
 .date{
-    margin-top:100px;
+    
 }
 .showing{
-    margin-left:430px;
+    
     font-size:30px;
 }
 .stock_name{
