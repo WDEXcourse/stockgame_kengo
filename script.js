@@ -126,17 +126,14 @@ function gaming (){
             }
             else {
                 day=day+1;
+                if (Ownmoney>=10000000){ //黒字の場合
+                    document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-10000000)+"円黒字です"
+                }
+                else{ //赤字の場合
+                    document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-10000000)+"円赤字です"
+                }
                 if(day>5){
-
-                    alert("あなたの最終総資産は"+ Number(Ownmoney)+"円です");
-                    if (Ownmoney>=10000000){
-                        alert("あなたは"+Number(Ownmoney-10000000)+"円黒字です");
-                        document.querySelector(".clear").setAttribute("style", "display:block");
-                    }
-                    else{
-                        alert("あなたは"+Number(Ownmoney-10000000)+"円赤字です");
-                        document.querySelector(".clear").setAttribute("style", "display:block");
-                    }
+                    document.querySelector(".clear").setAttribute("style", "display:block");
                     clearInterval(finishing);
                     return;
                 }

@@ -16,8 +16,8 @@
 
 .stock{
     border: solid 3px #000;
-    position: relative; 
-    top:150px;
+    
+    
     height: 70px;
     padding: 10px;
     width:400px;
@@ -33,7 +33,7 @@
 }
 .limit_time{
     font-size: 30px;
-    position: relative; 
+    
     
     
 
@@ -42,16 +42,16 @@
     font-size:80px;
 }
     
-.starting{
 
-}
+
+
 .timer{
-
-    font-size:30px;
     
-
+     font-size: 30px;
 }
 .date{
+
+    
     
 }
 .showing{
@@ -63,6 +63,21 @@
 }
 .possession_number{
     color:red;
+}
+.stock_all{
+    
+  justify-content: center;
+  align-items: center;
+  
+  
+
+}
+.result{
+    vertical-align: top;
+    display :inline-block;
+}
+.playingview{
+    display: inline-block;
 }
 
 
