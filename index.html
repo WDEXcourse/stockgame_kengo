@@ -4,17 +4,20 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+
 </head>
 
 <body>
 
-        <div class="starting">
-            <button onclick="gaming()">ゲーム開始</button>
-        </div>
-        <div class="showing">
-            <p>最新ニュース</p>
-            <p id="news"></p>
-        </div>
+    <div class="starting">
+        <button onclick="gaming()">ゲーム開始</button>
+    </div>
+    <div class="showing">
+        <p>最新ニュース</p>
+        <p id="news"></p>
+    </div>
 
     <div class="playingview">
         <div class="stock_all">
@@ -113,22 +116,55 @@
             DAY：<span class="day"></span>
         </div>
     </div>
-<div class="result">
-    <div class="possession_money">
+    <div class="result">
+        <div class="possession_money">
 
-        総資産:<span class="possession_number"></span>円
+            総資産:<span class="possession_number"></span>円
+        </div>
+        <div class="resultprofit">
+        
+        
+        </div>
+        <div class="clear"style="display:none">
+            ゲーム終了
+        </div>
     </div>
-    <div class="resultprofit">
-      
-      
+    <div class="lineshow">
+        <canvas id="lineChart"></canvas>
     </div>
-    <div class="clear"style="display:none">
-        ゲーム終了
-    </div>
-</div>
-
-
-
 </body>
+<body>
+    
+    <script>
+        let lineCtx = document.getElementById("lineChart");
+        // 線グラフの設定
+        let lineConfig = {
+          type: 'line',
+          data: {
+            // ※labelとデータの関係は得にありません
+            labels: ['0日目', '1日目', '2日目', '3日目', '4日目', '5日目'],
+            datasets: [{
+              label: '総資産',
+              data: [1000000],
+              borderColor: '#f88',
+            }],
+          },
+          options: {
+            scales: {
+              // Y軸の最大値・最小値、目盛りの範囲などを設定する
+              y: {
+                suggestedMin: 0,
+                suggestedMax: 2000000,
+                ticks: {
+                  stepSize: 1000000,
+                }
+              }
+            },
+          },
+        };
+        lineChart = new Chart(lineCtx, lineConfig);
+    </script>
+</body>
+
 
 </html>

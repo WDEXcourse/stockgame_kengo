@@ -1,4 +1,5 @@
-var Ownmoney = 10000000;
+const START_MONEY = 1000000;
+var Ownmoney = START_MONEY;
 var stock_data = {
     "SKY_STOCK": {
         money: 500,
@@ -28,7 +29,7 @@ window.onload = function () {
 
 }
 
-function generaize(company) {
+function generaize(company ){
     document.querySelector("#" + company + " .stock_money").textContent = stock_data[company].money;
     document.querySelector("#" + company + " .stock_number").textContent = stock_data[company].number;
 
@@ -105,7 +106,7 @@ const lists=[
 
 var isgaming=false;
 let finishing;
-document.querySelector(".clear").setAttribute("style", "display:none");
+var scoredata=[];
 
 function gaming (){
     if(isgaming==false){
@@ -118,19 +119,22 @@ function gaming (){
         document.querySelector(".day").textContent = day;
         
         const limit=function (){
-            if(limitTime>0){
+            if(limitTime>0){ //ゲーム中
                 limitTime=limitTime-1;
                 document.querySelector(".limit_time").textContent = limitTime;
                 
                 console.log(Number(limitTime));
             }
-            else {
+            else { //1日経ったとき
+                lineConfig.data.datasets[0].data.push(Ownmoney)
+                lineChart.destroy()
+                lineChart = new Chart(lineCtx, lineConfig);
                 day=day+1;
-                if (Ownmoney>=10000000){ //黒字の場合
-                    document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-10000000)+"円黒字です"
+                if (Ownmoney>=START_MONEY){ //黒字の場合
+                    document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-START_MONEY)+"円黒字です"
                 }
                 else{ //赤字の場合
-                    document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-10000000)+"円赤字です"
+                    document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-START_MONEY)+"円赤字です"
                 }
                 if(day>5){
                     document.querySelector(".clear").setAttribute("style", "display:block");
@@ -152,3 +156,6 @@ function gaming (){
 
 }
 
+function showChart(){
+    
+}

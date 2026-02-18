@@ -29,14 +29,10 @@
 }
 .clear{
 
-    font-size: 80px;
+    font-size: 35px;
 }
 .limit_time{
     font-size: 30px;
-    
-    
-    
-
 }
 .day{
     font-size:80px;
@@ -49,11 +45,7 @@
     
      font-size: 30px;
 }
-.date{
 
-    
-    
-}
 .showing{
     
     font-size:30px;
@@ -78,6 +70,11 @@
 }
 .playingview{
     display: inline-block;
+}
+.lineshow{
+    display: inline-block;
+    width:500px;
+    vertical-align: top;
 }
 
 
