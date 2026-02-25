@@ -48,6 +48,7 @@
 
 .showing{
     
+    
     font-size:30px;
 }
 .stock_name{
@@ -80,3 +81,14 @@
 
 
 
+body{
+    background-color: gold;
+}
+.showing{
+    display: inline-block;
+}
+.collect{
+    display:inline-block;
+    margin-top: 50px;
+    margin-left:30px;
+}

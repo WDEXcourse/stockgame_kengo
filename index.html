@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
+    
 
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-
+    
 
 </head>
 
 <body>
+    
 
     <div class="starting">
         <button onclick="gaming()">ゲーム開始</button>
     </div>
-    <div class="showing">
-        <p>最新ニュース</p>
-        <p id="news"></p>
+    <div class="top">
+        
+            <div class="showing">
+                <p>最新ニュース</p>
+                <p id="news"></p>
+             </div>
+    
+        <div class="collect">
+            <div class="timer">
+                <span class="limit_time"></span>秒
+        
+             </div>
+            <div class="date">
+                DAY：<span class="day"></span>
+            </div>
+    
+            <div class="result">
+                <div class="possession_money">
+                    総資産:<span class="possession_number"></span>円
+                </div>
+            </div>
+            <div class="resultprofit">
+            </div>
+        </div>
     </div>
 
     <div class="playingview">
@@ -108,23 +131,8 @@
             </div>
         </div>
             
-        <div class="timer">
-            <span class="limit_time"></span>秒
-        
-        </div>
-        <div class="date">
-            DAY：<span class="day"></span>
-        </div>
-    </div>
-    <div class="result">
-        <div class="possession_money">
-
-            総資産:<span class="possession_number"></span>円
-        </div>
-        <div class="resultprofit">
-        
-        
-        </div>
+       
+       
         <div class="clear"style="display:none">
             ゲーム終了
         </div>
