@@ -156,6 +156,8 @@ function gaming (){
 
 }
 
-function showChart(){
-    
+window.onload = function () {
+    document.querySelector("#close_button").addEventListener('click', function () {
+        document.querySelector(".clear").setAttribute("style", "display:none");
+    })
 }
