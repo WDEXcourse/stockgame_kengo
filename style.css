@@ -40,15 +40,19 @@
     text-align: center;
     background-color: white;
     width: 800px;
-    height: 300px;
+    height: 350px;
     z-index: 999;
     display: none;
+
 }
 .limit_time{
     font-size: 30px;
 }
 .day{
     font-size:80px;
+}
+#lineChart{
+    height: 385px!important;
 }
     
 
@@ -63,6 +67,7 @@
     
     
     font-size:30px;
+    color:brown;
 }
 .stock_name{
     color: aqua;
@@ -92,6 +97,7 @@
     vertical-align: top;
     background:#fff;
     width:570px;
+    height: 385px;
 }
 
 
@@ -119,6 +125,7 @@ body{
     padding:1px 5px 5px;
     height: 250px;
     vertical-align: top;
+    color:darkblue;
     
 }
 .date{

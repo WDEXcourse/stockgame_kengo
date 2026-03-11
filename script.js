@@ -1,3 +1,4 @@
+
 const START_MONEY = 1000000;
 var Ownmoney = START_MONEY;
 var stock_data = {
@@ -19,23 +20,25 @@ var stock_data = {
     }
 }
 
-
-window.onload = function () {
+window.addEventListener('load', function () {
+    
     document.querySelector(".possession_number").textContent = Ownmoney;
     generaize("SKY_STOCK")
     generaize("NITTA")
     generaize("TOYO")
     generaize("ISC")
 
-}
+})
+
 
 function generaize(company ){
     document.querySelector("#" + company + " .stock_money").textContent = stock_data[company].money;
     document.querySelector("#" + company + " .stock_number").textContent = stock_data[company].number;
-
+    
     var buy_button = document.querySelector("#" + company + " .buy_button");
-
+    
     buy_button.addEventListener('click', function () {
+        
         var buystocks = Number(prompt("何株購入しますか？"));
         if (Ownmoney >= stock_data[company].money * buystocks) {
             alert(buystocks + '株購入しました');
@@ -136,8 +139,19 @@ function gaming (){
                 else{ //赤字の場合
                     document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-START_MONEY)+"円赤字です"
                 }
-                if(day>5){
+                if(day>5){ //ゲーム終わったらポップアップを出す
                     document.querySelector(".clear").setAttribute("style", "display:block");
+                    document.getElementById("result1").textContent = "あなたの最終総資産は " +  Ownmoney+"円です";
+                    if(Ownmoney>=1000000){
+                         document.getElementById("result2").textContent = "あなたは"+(Ownmoney-1000000)+"円の黒字です";
+                    }
+                    else{
+                        document.getElementById("result2").textContent = "あなたは"+(Ownmoney-1000000)+"円の赤字です";
+
+                    }
+
+
+
                     clearInterval(finishing);
                     return;
                 }
@@ -152,9 +166,12 @@ function gaming (){
 
     
     }
-    document.querySelector(".clear").setAttribute("style", "display:none");
+    document.querySelector(".clear").setAttribute("style", "display:none"); //クリア画面を隠す
 
 }
+
+
+
 
 window.onload = function () {
     document.querySelector("#close_button").addEventListener('click', function () {
