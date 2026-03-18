@@ -59,7 +59,9 @@ function generaize(company ){
         var sellstocks = prompt("何株売却しますか？")
         if (sellstocks <= stock_data[company].number) {
             alert(sellstocks + '株売りました');
+
             stock_data[company].number = stock_data[company].number - sellstocks
+
             document.querySelector("#" + company + " .stock_number").textContent = stock_data[company].number;
             Ownmoney = Ownmoney + stock_data[company].money * sellstocks;
 
@@ -122,6 +124,16 @@ function gaming (){
         document.querySelector(".day").textContent = day;
         
         const limit=function (){
+            sum_money = Ownmoney+
+            stock_data["SKY_STOCK"]["money"]*stock_data["SKY_STOCK"]["number"]+
+            stock_data["NITTA"]["money"]*stock_data["NITTA"]["number"]+
+            stock_data["TOYO"]["money"]*stock_data["TOYO"]["number"]+
+            stock_data["ISC"]["money"]*stock_data["ISC"]["number"];
+            console.log(sum_money)
+
+
+
+
             if(limitTime>0){ //ゲーム中
                 limitTime=limitTime-1;
                 document.querySelector(".limit_time").textContent = limitTime;
@@ -129,24 +141,24 @@ function gaming (){
                 console.log(Number(limitTime));
             }
             else { //1日経ったとき
-                lineConfig.data.datasets[0].data.push(Ownmoney)
+                lineConfig.data.datasets[0].data.push(sum_money)
                 lineChart.destroy()
                 lineChart = new Chart(lineCtx, lineConfig);
                 day=day+1;
-                if (Ownmoney>=START_MONEY){ //黒字の場合
-                    document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-START_MONEY)+"円黒字です"
+                if (sum_money>=START_MONEY){ //黒字の場合
+                    document.querySelector(".resultprofit").textContent="あなたは"+Number(sum_money-START_MONEY)+"円黒字です"
                 }
                 else{ //赤字の場合
-                    document.querySelector(".resultprofit").textContent="あなたは"+Number(Ownmoney-START_MONEY)+"円赤字です"
+                    document.querySelector(".resultprofit").textContent="あなたは"+Number(sum_money-START_MONEY)+"円赤字です"
                 }
                 if(day>5){ //ゲーム終わったらポップアップを出す
                     document.querySelector(".clear").setAttribute("style", "display:block");
-                    document.getElementById("result1").textContent = "あなたの最終総資産は " +  Ownmoney+"円です";
-                    if(Ownmoney>=1000000){
-                         document.getElementById("result2").textContent = "あなたは"+(Ownmoney-1000000)+"円の黒字です";
+                    document.getElementById("result1").textContent = "あなたの最終総資産は " +  sum_money+"円です";
+                    if(sum_money>=1000000){
+                         document.getElementById("result2").textContent = "あなたは"+(sum_money-1000000)+"円の黒字です";
                     }
                     else{
-                        document.getElementById("result2").textContent = "あなたは"+(Ownmoney-1000000)+"円の赤字です";
+                        document.getElementById("result2").textContent = "あなたは"+(sum_money-1000000)+"円の赤字です";
 
                     }
 
