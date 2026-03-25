@@ -12,131 +12,134 @@
 
 <body>
     
-
-    <div class="starting">
-        <button onclick="gaming()">ゲーム開始</button>
-    </div>
-    <div class="top">
-        
-            <div class="showing">
-                <p>最新ニュース</p>
-                <p id="news"></p>
-             </div>
-    
-        <div class="collect">
-            <div class="timer">
-                <span class="limit_time"></span>秒
-        
-             </div>
-            <div class="date">
-                DAY：<span class="day"></span>
+    <div class="all">
+            <div class="starting">
+                <button onclick="gaming()">ゲーム開始</button>
             </div>
-    
-            <div class="result">
-                <div class="possession_money">
-                    所持現金:<span class="possession_number"></span>円
-                </div>
-            </div>
-            <div class="resultprofit">
-            </div>
-        </div>
-    </div>
-
-    <div class="playingview">
-        <div class="stock_all">
-            <div class="stock" id="SKY_STOCK">
-                <div class="stock_name">
-                    <div>SKY</div>
-
-                </div>
-
-                <div class="stock_button">
-                    <button class="buy_button">購入 </button>
-                    <br>
-                    <button class="sell_button">売る</button>
-                </div>
-                <div class="stock_data">
-
-                    <div class="stock_price">
-                        株価:<span class="stock_money"></span>円
+            <div class="top">
+                
+                    <div class="showing">
+                        <p>最新ニュース</p>
+                        <p id="news"></p>
                     </div>
-                    <div class="having">
-                        株数:<span class="stock_number"></span>株
-                    </div>
-                </div>
-            </div>
-
-            <div class="stock" id="NITTA">
-                <div class="stock_name">
-                    <div>NITTA</div>
-
-                </div>
-
-                <div class="stock_button">
-                    <button class="buy_button">購入 </button>
-                    <br>
-                    <button class="sell_button">売る</button>
-                </div>
-                <div class="stock_data">
-
-                    <div class="stock_price">
-                        株価:<span class="stock_money"></span>円
-                    </div>
-                    <div class="having">
-                        株数:<span class="stock_number"></span>株
-                    </div>
-                </div>
-            </div>
-            <div class="stock" id="TOYO">
-                <div class="stock_name">
-                    <div>TOYO</div>
-
-                </div>
-
-                <div class="stock_button">
-                    <button class="buy_button">購入 </button>
-                    <br>
-                    <button class="sell_button">売る</button>
-                </div>
-                <div class="stock_data">
-
-                    <div class="stock_price">
-                        株価:<span class="stock_money"></span>円
-                    </div>
-                    <div class="having">
-                        株数:<span class="stock_number"></span>株
-                    </div>
-                </div>
-            </div>
-            <div class="stock" id="ISC">
-                <div class="stock_name">
-                    <div>ISC</div>
-
-                </div>
-
-                <div class="stock_button">
-                    <button class="buy_button">購入 </button>
-                    <br>
-                    <button class="sell_button">売る</button>
-                </div>
-                <div class="stock_data">
-
-                    <div class="stock_price">
-                        株価:<span class="stock_money"></span>円
-                    </div>
-                    <div class="having">
-                       株数: <span class="stock_number"></span>株
-                    </div>
-                </div>
-            </div>
-        </div>
             
-       
-       
-        
-    </div>
-    <div class="lineshow">
-        <canvas id="lineChart"></canvas>
+                <div class="collect">
+                    <div class="timer">
+                        <span class="limit_time"></span>秒
+                
+                    </div>
+                    <div class="date">
+                        DAY：<span class="day"></span>
+                    </div>
+            
+                    <div class="result">
+                        <div class="possession_money">
+                            所持現金:<span class="possession_number"></span>円
+                        </div>
+                    </div>
+                    <div class="resultprofit">
+                    </div>
+                </div>
+            </div>
+
+        <div class="third">
+            <div class="playingview">
+                <div class="stock_all">
+                    <div class="stock" id="SKY_STOCK">
+                        <div class="stock_name">
+                            <div>SKY</div>
+
+                        </div>
+
+                        <div class="stock_button">
+                            <button class="buy_button">購入 </button>
+                            <br>
+                            <button class="sell_button">売る</button>
+                        </div>
+                        <div class="stock_data">
+
+                            <div class="stock_price">
+                                株価:<span class="stock_money"></span>円
+                            </div>
+                            <div class="having">
+                                株数:<span class="stock_number"></span>株
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stock" id="NITTA">
+                        <div class="stock_name">
+                            <div>NITTA</div>
+
+                        </div>
+
+                        <div class="stock_button">
+                            <button class="buy_button">購入 </button>
+                            <br>
+                            <button class="sell_button">売る</button>
+                        </div>
+                        <div class="stock_data">
+
+                            <div class="stock_price">
+                                株価:<span class="stock_money"></span>円
+                            </div>
+                            <div class="having">
+                                株数:<span class="stock_number"></span>株
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock" id="TOYO">
+                        <div class="stock_name">
+                            <div>TOYO</div>
+
+                        </div>
+
+                        <div class="stock_button">
+                            <button class="buy_button">購入 </button>
+                            <br>
+                            <button class="sell_button">売る</button>
+                        </div>
+                        <div class="stock_data">
+
+                            <div class="stock_price">
+                                株価:<span class="stock_money"></span>円
+                            </div>
+                            <div class="having">
+                                株数:<span class="stock_number"></span>株
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock" id="ISC">
+                        <div class="stock_name">
+                            <div>ISC</div>
+
+                        </div>
+
+                        <div class="stock_button">
+                            <button class="buy_button">購入 </button>
+                            <br>
+                            <button class="sell_button">売る</button>
+                        </div>
+                        <div class="stock_data">
+
+                            <div class="stock_price">
+                                株価:<span class="stock_money"></span>円
+                            </div>
+                            <div class="having">
+                            株数: <span class="stock_number"></span>株
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+            
+            
+                
+            </div>
+            <div class="lineshow">
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
     </div>
 </body>
 <body>

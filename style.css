@@ -105,7 +105,7 @@
 
 body{
     background:#FFFF66;
-    width:1100px;
+   
 }
 .showing{
     width:650px;
@@ -131,3 +131,20 @@ body{
 .date{
     border-bottom: 2px dashed black;
 }
+body {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.all{
+ text-align: center;
+ 
+ 
+}
+.third{
+    display: flex;
+}
+
